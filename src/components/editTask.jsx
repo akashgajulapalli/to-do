@@ -4,6 +4,7 @@ import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
 const EditTask = ({ modal, toggle, updateTask, taskObj }) => {
   const [taskName, setTaskName] = useState("");
   const [description, setDescription] = useState("");
+  console.log(taskObj);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -17,9 +18,10 @@ const EditTask = ({ modal, toggle, updateTask, taskObj }) => {
   useEffect(() => {
     setTaskName(taskObj.Name);
     setDescription(taskObj.Description);
-  }, []);
+  },[]);
 
   const handleUpdate = (e) => {
+    console.log(e);
     e.preventDefault();
     let tempObj = {};
     tempObj["Name"] = taskName;
