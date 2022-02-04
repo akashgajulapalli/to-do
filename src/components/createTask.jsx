@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
 
+
+
 const CreateTask = (props) => {
   const { modal, toggle, save } = props;
 
@@ -22,6 +24,8 @@ const CreateTask = (props) => {
       Description: description,
     };
     save(taskObj);
+    setTaskName("");
+    setDescription("");
   };
   return (
     <Modal isOpen={modal} toggle={toggle}>

@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import EditTask from "./editTask";
 
 
+
+
 const Card = (props) => {
     const{taskObj, index, deleteTask, updateListArray } =props;
     const[modal,setModal] = useState(false);
@@ -53,18 +55,17 @@ const Card = (props) => {
         style={{ "background-color": colors[index % 5].primaryColor }}
       ></div>
       <div class="task-holder">
+        <div className="head">
         <span
           class="card-header"
           style={{
             "background-color": colors[index % 5].secondaryColor,
-            "border-radius": "10px",
+            "border-radius": "5px",
           }}
         >
           {taskObj.Name}
         </span>
-        <p className="mt-3">{taskObj.Description}</p>
-
-        <div style={{ position: "absolute", right: "20px", bottom: "20px" }}>
+        <div className="but" style={{ position: "absolute", right: "20px"}}>
           <i
             class="far fa-edit"
             style={{ color: colors[index % 5].primaryColor, cursor: "pointer", marginRight: "15px" }}
@@ -76,7 +77,16 @@ const Card = (props) => {
             onClick={handleDelete}
           ></i>
         </div>
-      </div>
+  
+
+
+
+        </div>
+
+        <div className="desc">
+        <p className="mt-3">{taskObj.Description}</p>
+        </div>
+    </div>
       <EditTask
         modal={modal}
         toggle={toggle}
