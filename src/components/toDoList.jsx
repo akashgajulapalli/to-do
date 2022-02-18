@@ -35,7 +35,7 @@ class Todo extends Component {
       modal: false,
       taskList: tempList,
     });
-    
+
   };
 
   deleteTask= (index) => {
@@ -65,7 +65,7 @@ class Todo extends Component {
     return (
         <>
         <div className="header">
-          <h3>Todo List</h3>
+          <h3>Todo App</h3>
           <button className="btn btn-info" onClick={this.handleClick}>
             Create Task
           </button>

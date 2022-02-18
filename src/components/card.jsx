@@ -50,10 +50,10 @@ const Card = (props) => {
   }
   return (
     <div class="card-wrapper mr-5">
-      <div
+      {/* <div
         class="card-top"
         style={{ "background-color": colors[index % 5].primaryColor }}
-      ></div>
+      ></div> */}
       <div class="task-holder">
         <div className="head">
         <span

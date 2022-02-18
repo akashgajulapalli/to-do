@@ -5,7 +5,6 @@ import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
 
 const CreateTask = (props) => {
   const { modal, toggle, save } = props;
-
   const [taskName, setTaskName] = useState("");
   const [description, setDescription] = useState("");
   const handleChange = (e) => {
@@ -16,7 +15,7 @@ const CreateTask = (props) => {
     } else {
       setDescription(value);
     }
-  };
+  };  
   
   const handleClick = () => {
     let taskObj = {
